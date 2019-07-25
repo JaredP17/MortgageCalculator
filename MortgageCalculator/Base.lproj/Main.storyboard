@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MortgageCalculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loan Amount in Dollars" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n2M-4I-3pR">
+                                <rect key="frame" x="99.666666666666686" y="76" width="177" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of Payments" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5z2-6t-5MG">
+                                <rect key="frame" x="107" y="151" width="161" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Interest Rate" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fDX-5o-XMW">
+                                <rect key="frame" x="139" y="226" width="98" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ugZ-BN-M8g">
+                                <rect key="frame" x="97" y="105" width="182" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="182" id="p0l-XR-kuu"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                <connections>
+                                    <action selector="textFieldChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="9NH-1T-wKm"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vNU-tt-ZKY">
+                                <rect key="frame" x="96" y="180" width="182" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="182" id="btV-fd-1Cv"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                <connections>
+                                    <action selector="textFieldChanged:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="eiz-g1-FOl"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IQW-fT-mei">
+                                <rect key="frame" x="97" y="255" width="182" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="182" id="AF7-FW-ViD"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                <connections>
+                                    <action selector="textFieldChanged:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="hEH-pA-Jy9"/>
+                                </connections>
+                            </textField>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ETf-Ps-Gqp">
+                                <rect key="frame" x="124" y="301" width="127" height="29"/>
+                                <segments>
+                                    <segment title="Annual"/>
+                                    <segment title="Monthly"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segControlChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="uhZ-7p-AIw"/>
+                                </connections>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zEM-v7-kBe">
+                                <rect key="frame" x="106" y="513" width="163" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Calculate Payment"/>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SaF-2d-Vpc"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Payment Amount: $0.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RsR-Jv-RWV">
+                                <rect key="frame" x="71.999999999999986" y="409" width="231.66666666666663" height="24"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="fDX-5o-XMW" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="89O-32-7Jf"/>
+                            <constraint firstItem="zEM-v7-kBe" firstAttribute="top" secondItem="RsR-Jv-RWV" secondAttribute="bottom" constant="80" id="8Xo-zs-wri"/>
+                            <constraint firstItem="n2M-4I-3pR" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="32" id="FYS-41-ghM"/>
+                            <constraint firstItem="5z2-6t-5MG" firstAttribute="top" secondItem="ugZ-BN-M8g" secondAttribute="bottom" constant="16" id="G6H-5k-kF3"/>
+                            <constraint firstItem="vNU-tt-ZKY" firstAttribute="top" secondItem="5z2-6t-5MG" secondAttribute="bottom" constant="8" id="IA2-Tb-Ibc"/>
+                            <constraint firstItem="IQW-fT-mei" firstAttribute="top" secondItem="fDX-5o-XMW" secondAttribute="bottom" constant="8" id="L2l-cw-gn2"/>
+                            <constraint firstItem="RsR-Jv-RWV" firstAttribute="top" secondItem="ETf-Ps-Gqp" secondAttribute="bottom" constant="80" id="NEr-5p-I80"/>
+                            <constraint firstItem="n2M-4I-3pR" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Nu7-34-AgJ"/>
+                            <constraint firstItem="RsR-Jv-RWV" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Q6l-Cb-eXs"/>
+                            <constraint firstItem="IQW-fT-mei" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="THO-0F-bdn"/>
+                            <constraint firstItem="ETf-Ps-Gqp" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="akC-Mh-cBg"/>
+                            <constraint firstItem="vNU-tt-ZKY" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="drd-7j-NfF"/>
+                            <constraint firstItem="fDX-5o-XMW" firstAttribute="top" secondItem="vNU-tt-ZKY" secondAttribute="bottom" constant="16" id="dvo-lU-kgK"/>
+                            <constraint firstItem="ugZ-BN-M8g" firstAttribute="top" secondItem="n2M-4I-3pR" secondAttribute="bottom" constant="8" id="gEI-fS-m18"/>
+                            <constraint firstItem="ugZ-BN-M8g" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="mpB-UF-gb0"/>
+                            <constraint firstItem="5z2-6t-5MG" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="umC-eh-tuq"/>
+                            <constraint firstItem="ETf-Ps-Gqp" firstAttribute="top" secondItem="IQW-fT-mei" secondAttribute="bottom" constant="16" id="w0t-QK-ThI"/>
+                            <constraint firstItem="zEM-v7-kBe" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="zTF-ee-98U"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="calculatePaymentButton" destination="zEM-v7-kBe" id="qD3-sf-A2k"/>
+                        <outlet property="interestTextField" destination="IQW-fT-mei" id="So0-bU-aNq"/>
+                        <outlet property="paymentAmountTextField" destination="RsR-Jv-RWV" id="icc-Vv-K7q"/>
+                        <outlet property="paymentsTextField" destination="vNU-tt-ZKY" id="iYp-hw-RZY"/>
+                        <outlet property="periodSegmentedControl" destination="ETf-Ps-Gqp" id="iY7-Ht-LWj"/>
+                        <outlet property="principleTextField" destination="ugZ-BN-M8g" id="nzs-aC-8cU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-79.200000000000003" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+</document>
